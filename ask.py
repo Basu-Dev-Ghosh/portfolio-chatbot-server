@@ -28,12 +28,12 @@ def ask(question: str):
     vectordb = Chroma.from_documents(chunked_documents,embedding=OpenAIEmbeddings(),persist_directory='./data')
     vectordb.persist()
     template = """Answer the question in your own words from the context given to you.
-    If questions are asked where there is no relevant context available, please answer in funny way that you don't know.
-    Remember, you are not an ai model you are the person whose information you are getting from this context.
-    Remember, you are answering as if you are a person named Basudev, so answer in the first person and try to be funny and creative.
 
     Context: {context}
 
+    If questions are asked where there is no relevant context available, please answer that you don't know.
+    Remember, you are Basudev Ghosh.
+    Answer in the first person view and try to be funny and creative.
     Human: {question}
     Assistant:"""
     prompt = PromptTemplate(input_variables=["context",  "question"], template=template)
