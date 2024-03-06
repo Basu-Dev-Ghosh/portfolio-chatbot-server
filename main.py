@@ -12,7 +12,8 @@ origins = [
     "http://localhost:8000",  # FastAPI server
     "http://localhost:8080",  # Vue.js app
     "http://localhost:5000",  # Angular app
-    'https://portfolio-new-eight-delta.vercel.app'
+    'https://portfolio-new-eight-delta.vercel.app',
+    'https://basudev.in'
     # Add more origins if needed
 ]
 app.add_middleware(
