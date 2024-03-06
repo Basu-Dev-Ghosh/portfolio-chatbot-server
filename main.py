@@ -13,7 +13,8 @@ origins = [
     "http://localhost:8080",  # Vue.js app
     "http://localhost:5000",  # Angular app
     'https://portfolio-new-eight-delta.vercel.app',
-    'https://basudev.in'
+    'https://basudev.in',
+    'https://www.basudev.in'
     # Add more origins if needed
 ]
 app.add_middleware(
