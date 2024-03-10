@@ -1,11 +1,12 @@
 # Import necessary modules from FastAPI
-
+import os
+from dotenv import load_dotenv
 from fastapi import FastAPI
 from ask import ask
 from fastapi.middleware.cors import CORSMiddleware
-
 # Create an instance of the FastAPI class
 app = FastAPI()
+# os.environ['OPENAI_API_KEY'] = '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'
 
 origins = [
     "http://localhost:3000",  # React app
@@ -27,5 +28,6 @@ app.add_middleware(
 
 @app.get("/ask")
 def read_question(question: str):
+    print(os.environ['OPENAI_API_KEY'])
     res=ask(question)
     return res
